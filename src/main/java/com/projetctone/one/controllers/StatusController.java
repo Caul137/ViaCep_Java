@@ -1,10 +1,5 @@
 package com.projetctone.one.controllers;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import javax.xml.crypto.Data;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +19,7 @@ public class StatusController {
     }
 
     @GetMapping("/listar/{cep}")
-    public EnderecoDto ListarCep(@PathVariable  String cep) {
+    public EnderecoDto ListarCep(@PathVariable String cep) {
         return this.viacep.Consultar(cep);
     }
     
