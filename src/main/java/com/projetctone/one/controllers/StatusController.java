@@ -2,6 +2,7 @@ package com.projetctone.one.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +22,11 @@ public class StatusController {
     @GetMapping("/listar/{cep}")
     public EnderecoDto ListarCep(@PathVariable String cep) {
         return this.viacep.Consultar(cep);
+    }
+
+    @GetMapping("/private")
+    public String Private(){
+        return "privado";
     }
     
 }

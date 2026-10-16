@@ -26,8 +26,7 @@ public class EnderecoService {
             String url = "https://viacep.com.br/ws/" + cep + "/json/";
 
             EnderecoDto jsonResposta = restTemplate.getForObject(url, EnderecoDto.class);
-            
-            
+              
             return jsonResposta;
 
         } catch (Exception e) {
